@@ -19,14 +19,14 @@ def menu():
         return False
     elif menu_selected == '1':
         while(serveroverview.test()):
-            ...
+            pass
     elif menu_selected == '2':
         while(speedtesttools.test()):
-            ...
+            pass
     elif menu_selected == '3':
         while(whois.test()):
-            ...
+            pass
     return True
 
 while(menu()):
-   ...
+   pass

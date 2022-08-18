@@ -19,10 +19,10 @@ def test():
 
         check_download_upload(spt, "http://speedtesthn.fpt.vn/", "FPT, Ha Noi, VN")
         check_download_upload(spt, "http://speedtest.fpt.vn/", "Ho Chi Minh City, Ho Chi Minh City, VN")
-        
-        return
+         
     except Exception:
         print(colorama.Fore.LIGHTRED_EX+"Error: Check your Internet Connection.\n\n")
+    return False
 
 def check_download_upload(spt, server, description):
     try:
