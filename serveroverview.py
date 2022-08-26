@@ -55,12 +55,5 @@ def test():
         disks_write_per_sec = disks_after.write_bytes - disks_before.write_bytes
         print(colorama.Fore.LIGHTCYAN_EX + 'Disk read: ' + colorama.Fore.LIGHTYELLOW_EX+f'{disks_read_per_sec}')
         print(colorama.Fore.LIGHTCYAN_EX + 'Disk write: ' + colorama.Fore.LIGHTYELLOW_EX+f'{disks_write_per_sec}')
-
-    try:
-        r = requests.post('https://whois.inet.vn/api/iplocation/detail', json={})
-        response = r.json() 
-        print(colorama.Fore.LIGHTCYAN_EX + 'IP public: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("data").get("ipClient")}')
-    except Exception as ex:
-        print(ex)
     print(colorama.Fore.RESET)
     return False
