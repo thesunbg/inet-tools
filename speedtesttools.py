@@ -8,7 +8,6 @@ def test():
     try:
         spt = speedtest.Speedtest()
         config = spt.get_config()
-        print(config)
         print(f'{colorama.Fore.LIGHTCYAN_EX}[*] Your IP: {colorama.Fore.LIGHTYELLOW_EX}{config.get("client").get("ip")}')
         print(f'{colorama.Fore.LIGHTCYAN_EX}[*] ISP: {colorama.Fore.LIGHTYELLOW_EX}{config.get("client").get("isp")}')
         print(f'{colorama.Fore.LIGHTCYAN_EX}[*] Country: {colorama.Fore.LIGHTYELLOW_EX}{config.get("client").get("country")}')

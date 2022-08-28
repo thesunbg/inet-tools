@@ -11,7 +11,7 @@ def menu():
     0. Exit
     1. Server Information (OS, CPU, Memory, Disk...)
     2. Speedtest (Using Speedtest.net)
-    3. Whois (All tld, ex: .vn...)
+    3. Whois (All tld: .com, .vn, .net, .xyz, ...)
     4. Check host (Ping, HTTP, TCP)
     """)
     menu_selected = input("Input tools: ")

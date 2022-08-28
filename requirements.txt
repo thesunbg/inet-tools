@@ -2,3 +2,4 @@ speedtest-cli
 pyfiglet
 psutil
 colorama
+tabulate

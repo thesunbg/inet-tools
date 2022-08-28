@@ -1,4 +1,5 @@
 import requests
+import colorama
 
 def test():
     print("WHOIS")
@@ -8,23 +9,15 @@ def test():
     print("Loading ... ")
     r = requests.get('https://whois.inet.vn/api/whois/domainspecify/' + param, json={})
     response = r.json() 
-    print(f"""
-    Done
-    Message: {response.get('messsage')}
-    Code: {"Not register" if response.get('code') == '1' else "Registered"}
-    Domain Name: {response.get('domainName')}
-    Registrar: {response.get('registrar')}
-    Registrant: {response.get('registrant')}
-    Creation Date: {response.get('creationDate')}
-    Expiry Date: {response.get('expirationDate')}
-    """)
 
-    step = input(f"""
-    Continue?:
-    y - yes
-    n - no
-    """)
-    if step == 'y':
-        return True
-    else:
-        return False
+    print(colorama.Fore.LIGHTCYAN_EX + 'Message: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("message")}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Code: ' + colorama.Fore.LIGHTYELLOW_EX+f'{"Not register" if response.get("code") == "1" else "Registered"}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Domain Name: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("domainName")}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Registrar: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("registrar")}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Registrant: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("Registrant")}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Creation Date: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("creationDate")}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Expiry Date: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("expirationDate")}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Name Server: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("nameServer")}')
+    print(colorama.Fore.LIGHTCYAN_EX + 'Status: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("status")}')
+    print(colorama.Fore.RESET)
+    return False
