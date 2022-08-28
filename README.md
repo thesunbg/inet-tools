@@ -4,8 +4,11 @@
 
 # Installation
 ```git clone https://github.com/thesunbg/inet-tools.git```
+
 ```cd inet-tools```
+
 ```pip3 install -r requirements```
+
 ```python3 main.py```
 
 Or can run .sh file for each type of OS: Centos, Ubuntu,
