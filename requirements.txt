@@ -3,3 +3,4 @@ pyfiglet
 psutil
 colorama
 tabulate
+requests
