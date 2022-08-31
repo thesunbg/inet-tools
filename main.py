@@ -6,7 +6,7 @@ import whois
 import checkhost
 
 def menu():
-    print(pyfiglet.figlet_format("Python Tools"))
+    print(pyfiglet.figlet_format("iNET Tools"))
     print("""
     0. Exit
     1. Server Information (OS, CPU, Memory, Disk...)
