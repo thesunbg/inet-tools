@@ -14,7 +14,7 @@ def menu():
     3. Whois (All tld: .com, .vn, .net, .xyz, ...)
     4. Check host (Ping, HTTP, TCP)
     """)
-    menu_selected = '0'
+    menu_selected = '-1'
     try:
         menu_selected = input("Input tools: ")
     except EOFError:
