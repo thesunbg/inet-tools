@@ -13,7 +13,7 @@ def test():
         print(colorama.Fore.LIGHTCYAN_EX +'Platform: '+colorama.Fore.LIGHTYELLOW_EX+'MacOS')
     else:
         print(colorama.Fore.LIGHTCYAN_EX +'Platform: '+colorama.Fore.LIGHTYELLOW_EX+'' +  platform.platform())
-        print(colorama.Fore.LIGHTCYAN_EX +'Distribution: ' +colorama.Fore.LIGHTYELLOW_EX+''+platform.linux_distribution())
+        print(colorama.Fore.LIGHTCYAN_EX +'Distribution: ' +colorama.Fore.LIGHTYELLOW_EX+''+platform.freedesktop_os_release())
     print(colorama.Fore.LIGHTCYAN_EX +'System: ' +colorama.Fore.LIGHTYELLOW_EX+''+platform.system())
     print(colorama.Fore.LIGHTCYAN_EX +'Release: ' +colorama.Fore.LIGHTYELLOW_EX+''+platform.release())
     print(colorama.Fore.LIGHTCYAN_EX +'Uptime: '+colorama.Fore.LIGHTYELLOW_EX+f'{(time.time() - psutil.boot_time())/DAY_SECONDS:.0f} days')
