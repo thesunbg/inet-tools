@@ -20,4 +20,5 @@ def test():
     print(colorama.Fore.LIGHTCYAN_EX + 'Name Server: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("nameServer")}')
     print(colorama.Fore.LIGHTCYAN_EX + 'Status: ' + colorama.Fore.LIGHTYELLOW_EX+f'{response.get("status")}')
     print(colorama.Fore.RESET)
+    input("Press any key to exit! ")
     return False

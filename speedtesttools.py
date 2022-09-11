@@ -4,7 +4,7 @@ import time
 from tabulate import tabulate
 
 def test():
-    print("SPEEDTEST ")
+    print("SPEEDTEST")
     try:
         spt = speedtest.Speedtest()
         config = spt.get_config()
@@ -44,6 +44,7 @@ def test():
         print(colorama.Fore.LIGHTYELLOW_EX)
         print(tabulate(response))
         print(colorama.Fore.RESET)
+        input("Press any key to exit! ")
     except Exception as e:
         print(colorama.Fore.LIGHTRED_EX+f"{e}.\n\n")
         if '403: Forbidden' in e:

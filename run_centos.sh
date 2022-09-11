@@ -1,0 +1,1 @@
+curl -Lso- https://raw.githubusercontent.com/thesunbg/inet-tools/master/install_centos.sh | bash && python3 inet-tools/main.py

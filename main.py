@@ -9,14 +9,14 @@ def menu():
     print(pyfiglet.figlet_format("iNET Tools"))
     print("""
     0. Exit
-    1. Server Information (OS, CPU, Memory, Disk...)
-    2. Speedtest (Using Speedtest.net)
-    3. Whois (All tld: .com, .vn, .net, .xyz, ...)
-    4. Check host (Ping, HTTP, TCP)
+    1. Server Information (OS, CPU, Memory, Disk ...)
+    2. Speedtest (Use Speedtest.net)
+    3. Whois (All tlds: .com, .vn, .net, .xyz, ...)
+    4. Check host (PING, HTTP, TCP)
     """)
-    menu_selected = input("Input tools: ")
+    menu_selected = input("Select tools: ")
     if menu_selected == '0':
-        print("Goodbye!")
+        print("Bye!")
         return False
     elif menu_selected == '1':
         while(serveroverview.test()):

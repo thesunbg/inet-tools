@@ -2,16 +2,18 @@ import psutil
 import platform
 import time
 import colorama
-import requests
+import os
 
 def test():
-    print("SYSTEM INFORMATION ")
+    print("SYSTEM INFORMATION")
     GB = 1024 * 1024 * 1024
     DAY_SECONDS = 86400
+    print(colorama.Fore.LIGHTCYAN_EX +'OS Name: ' +colorama.Fore.LIGHTYELLOW_EX+''+os.name())
     if platform.system() == 'Darwin':
         print(colorama.Fore.LIGHTCYAN_EX +'Platform: '+colorama.Fore.LIGHTYELLOW_EX+'MacOS')
     else:
-        print(colorama.Fore.LIGHTCYAN_EX +'Platform: '+colorama.Fore.LIGHTYELLOW_EX+'' +  platform.system())
+        print(colorama.Fore.LIGHTCYAN_EX +'Platform: '+colorama.Fore.LIGHTYELLOW_EX+'' +  platform.platform())
+    print(colorama.Fore.LIGHTCYAN_EX +'System: ' +colorama.Fore.LIGHTYELLOW_EX+''+platform.system())
     print(colorama.Fore.LIGHTCYAN_EX +'Release: ' +colorama.Fore.LIGHTYELLOW_EX+''+platform.release())
     print(colorama.Fore.LIGHTCYAN_EX +'Uptime: '+colorama.Fore.LIGHTYELLOW_EX+f'{(time.time() - psutil.boot_time())/DAY_SECONDS:.0f} days')
 
@@ -56,4 +58,5 @@ def test():
         print(colorama.Fore.LIGHTCYAN_EX + 'Disk read: ' + colorama.Fore.LIGHTYELLOW_EX+f'{disks_read_per_sec}')
         print(colorama.Fore.LIGHTCYAN_EX + 'Disk write: ' + colorama.Fore.LIGHTYELLOW_EX+f'{disks_write_per_sec}')
     print(colorama.Fore.RESET)
+    input("Press any key to exit! ")
     return False
