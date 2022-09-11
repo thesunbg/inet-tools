@@ -18,7 +18,7 @@ def menu():
     try:
         menu_selected = input("Input tools: ")
     except EOFError:
-            pass
+        pass
     if menu_selected == '0':
         print("Goodbye!")
         return False
