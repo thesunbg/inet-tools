@@ -11,7 +11,9 @@
 
 ```python3 main.py```
 
-Or can run .sh file for each type of OS: Centos, Ubuntu,
+Or run .sh file for each type of OS: Centos, Ubuntu
+
+```curl -Lso- https://raw.githubusercontent.com/thesunbg/inet-tools/master/install_centos.sh | bash && python3 inet-tools/main.py```
 
 # Tools 
 
